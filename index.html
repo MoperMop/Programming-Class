@@ -1,0 +1,60 @@
+<!--
+    NOTE: this is an html file that I will not be covering in class
+    if you want to understand what this is doing I have left comments
+    explaining what's going on that you can look at after class
+-->
+
+
+<!--declare the document as html-->
+<!DOCTYPE html>
+<!--create a root element-->
+<html lang="en">
+<head>
+    <!--the head element contains information about the page-->
+
+
+    <!--name the page-->
+    <title>Programming Class</title>
+
+
+    <!--declare some css code-->
+    <!--NOTE: normally you would declare css in a seprate file, but since this css code is so short i'm just putting it here-->
+    <style>
+        /*select the element with the id "main"*/
+        #main{
+            /*position the selected element(s) in the top left corner*/
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /*select the body element*/
+        body{
+            /*disable scroll bars on the selected element(s)*/
+            overflow: hidden;
+        }
+    </style>
+
+
+    <!--define the text characters used-->
+    <meta charset="UTF-8" />
+    <!--scale to make things look good on smaller screens-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <!--the body element contains actual objects to be displayed on the page-->
+
+
+    <!--create an element that can display graphics and give it an ID of "main"-->
+    <canvas id="main"></canvas>
+
+
+    <!--run the code in setup.js and script.js-->
+    <script src="setup.js"></script>
+    <script src="script.js"></script>
+    <!--
+        NOTE: you almost always want to run javascript at the very end
+        of your html file, doing otherwise can slow down your code
+    -->
+</body>
+</html>
