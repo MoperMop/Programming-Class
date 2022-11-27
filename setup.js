@@ -38,13 +38,13 @@ window.addEventListener("mousedown", () => {mouse.clicking = true;});
 window.addEventListener("mouseup", () => {mouse.clicking = false;});
 
 //when the user presses/releases a key with the window selected, add/remove that key to a list of pressed keys
-window.addEventListener("keydown", (event) => {keysDown.push(event.key.toLowerCase());});
+window.addEventListener("keypress", (event) => {
+    //only add the key if the pressed key is not already in the list of pressed keys
+    if(!keyIsPressed(event.key.toLowerCase())){keysDown.push(event.key.toLowerCase());}
+});
 window.addEventListener("keyup", (event) => {
-    //check if the released key is in the list of down keys (to prevent errors)
-    if(keyIsPressed(event.key.toLowerCase())){
-        //remove 1 value from the list at the index of the released key
-        keysDown.splice(keysDown.indexOf(event.key.toLowerCase()), 1);
-    }
+    //remove 1 value from the list at the index of the released key
+    keysDown.splice(keysDown.indexOf(event.key.toLowerCase()), 1);
 });
 
 
